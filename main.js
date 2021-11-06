@@ -239,3 +239,40 @@ const d = new Settlement("rgvr", 12);
 console.log(d.printDitels());
 
 console.log(Settlement.bigResidents([b, c, d]));
+
+class Keren{
+  name;
+  age;
+  constructor(name,age){
+    this.name=name;
+    this.age=age;
+  }
+}
+// ===================================================================
+// function ReturnPromise(num){
+//   return new Promise((resolve,reject)=>{
+// num==9?resolve("yes"):reject("no");
+//   })
+// }
+// async function p(){
+//   try{
+//     return await ReturnPromise(7)
+//   }
+//   catch(err){
+//     return err
+//   }
+// }
+// p().then(res=>{console.log(res)})
+// .catch(rej=>{console.log(rej)})
+// ===================================================================
+async function fetchF(){
+  try{
+    return fetch(`rf`)
+    .then(res=>res.json())
+  }
+  catch(err){
+    return err
+  }
+}
+fetchF().then(res=>{console.log(res)})
+// ======================================================
